@@ -82,7 +82,7 @@ class MovieSerializer(serializers.Serializer):
         return movie
 
     def update(self, instance, validated_data):
-        actors = validated_data.pop("authors", None)
+        actors = validated_data.pop("actors", None)
         genres = validated_data.pop("genres", None)
 
         instance.title = validated_data.get("title", instance.title)
